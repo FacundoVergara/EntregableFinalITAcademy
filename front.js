@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded({ extended: true })); // to support URL-encoded bodies
-var categoryController = require('/controllers/cartController.js');
+var cartController = require('/controllers/cartController.js');
 
 
 var server = app.listen(8080, function () {
@@ -40,6 +40,6 @@ app.get('/products', function(req,res){
 });
 
 app.get('/cart', function (req, res) {
-    siteController.getSite(req, res)
+    cartController.getCart(req, res)
 });
 
