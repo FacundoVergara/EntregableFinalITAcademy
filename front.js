@@ -9,6 +9,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded({ extended: true })); // to support URL-encoded bodies
+var categoryController = require('/controllers/cartController.js');
+
 
 var server = app.listen(8080, function () {
 
@@ -35,5 +37,9 @@ app.get('/products', function(req,res){
     console.log("Front-End: Request página products");
             res.render('index',{data:"data"});
 
+});
+
+app.get('/cart', function (req, res) {
+    siteController.getSite(req, res)
 });
 
