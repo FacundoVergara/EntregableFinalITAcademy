@@ -36,3 +36,4 @@ app.get('/products', function(req,res){
             res.render('index2.ejs',{data:"data"});
 
 });
+
