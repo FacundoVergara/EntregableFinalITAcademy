@@ -77,6 +77,20 @@ build/Release
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
+/node_modules
 
-#MAC
+# testing
+/coverage
+
+# production
+/build
+
+#OTHER
 .DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.idea
+
+
