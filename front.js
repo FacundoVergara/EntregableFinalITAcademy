@@ -28,5 +28,11 @@ app.use('/css', express.static(__dirname + '/public/stylesheets'));
 
 app.get('/', function(req, res) {
     console.log("Front-End: Request página inicial");
-            res.render('index', {data:{title:"HOLA"}});
+            res.render('index', {data:{title:"Landing Page"}});
+});
+
+app.get('/products', function(req,res){
+    console.log("Front-End: Request página products");
+            res.render('index2.ejs',{data:"data"});
+
 });
