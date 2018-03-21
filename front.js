@@ -18,7 +18,7 @@ var server = app.listen(8080, function () {
     console.log("Escuchando en http://%s:%s", host, port);
 
 });
-
+app.engine('ejs', require('express-ejs-extend'));
 app.set('views',__dirname+"/views/");
 app.set('view engine','ejs');
 
@@ -33,7 +33,7 @@ app.get('/', function(req, res) {
 
 app.get('/products', function(req,res){
     console.log("Front-End: Request página products");
-            res.render('index2.ejs',{data:"data"});
+            res.render('index',{data:"data"});
 
 });
 
